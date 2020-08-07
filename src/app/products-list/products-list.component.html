@@ -1,0 +1,11 @@
+<section class = "mt-5">
+    <!--<button (click) ="product=[]">Remove all</button>-->
+    <div *ngFor = "let myProduct of products"
+    [class.active] = "isSelected(myProduct)"
+        class = "ml-auto mr-auto"
+        style = "max-width: 640px;">
+
+    <app-product-row [product] = "myProduct" (selectedProduct) = "getSelectedProduct($event)"></app-product-row>
+
+    </div>
+</section>
